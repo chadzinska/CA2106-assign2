@@ -1,1 +1,21 @@
+:root {                             /*use colors as: var(--COLORNAME) eg. background: var(--lightpink); */
+    --lightpink: #ffe1df;
+    --pink: #F87B87;
+    --green: #AACB73;
+    --darkgreen: #2d4413;
+    --black: #141e08;
+    --white: #fff4f3;
+}
 
+* {
+    box-sizing: border-box;  /*handy setting i think*/
+}
+
+body {                              /*just to have something*/
+    background: var(--white);
+}
+
+#welcome-text {                     /*also just to have something*/
+    background: var(--lightpink);
+    color: var(--black);
+}
