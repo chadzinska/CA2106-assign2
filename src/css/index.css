@@ -1,21 +1,56 @@
-:root {                             /*use colors as: var(--COLORNAME) eg. background: var(--lightpink); */
-    --lightpink: #ffe1df;
-    --pink: #F87B87;
-    --green: #AACB73;
-    --darkgreen: #2d4413;
-    --black: #141e08;
-    --white: #fff4f3;
+:root {
+  /*use colors as: var(--COLORNAME) eg. background: var(--lightpink); */
+  --lightpink: #ffe1df;
+  --pink: #f87b87;
+  --green: #aacb73;
+  --darkgreen: #2d4413;
+  --black: #141e08;
+  --white: #fff4f3;
 }
 
 * {
-    box-sizing: border-box;  /*handy setting i think*/
+  box-sizing: border-box; /*handy setting i think*/
 }
 
-body {                              /*just to have something*/
-    background: var(--white);
+body {
+  /*just to have something*/
+  background: var(--white);
 }
 
-#welcome-text {                     /*also just to have something*/
-    background: var(--lightpink);
-    color: var(--black);
+/* Getting the top part sorted */
+
+#logo-container {
+  background-color: var(--green);
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+  border: 5px solid;
+  border-color: var(--darkgreen);
+}
+/* This will be replaced with the logo image, just needed a fancy circle for now */
+
+#welcome-text {
+  /*also just to have something*/
+  background: var(--lightpink);
+  color: var(--black);
+}
+
+#price-plans {
+  /* the horizontal part where all the price plans are held */
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.price-plan {
+  background-color: var(--green);
+  height: 500px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: blue;
+}
+
+header {
+  background-color: red;
 }
