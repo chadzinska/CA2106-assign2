@@ -23,7 +23,7 @@
       class="container-fluid row justify-content-around align-items-center pt-4"
     >
       <div class="col-lg-5" id="logo-container">
-        <!-- Replace this with logo image, styling shouldn't have to change -->
+        <!-- Replace this with logo image, styling shouldn't have to change much -->
       </div>
       <div class="col-md-3 text-center">
         <h1>Get cooking today!</h1>
@@ -36,55 +36,87 @@
     </header>
 
     <main>
-      <div class="container mt-4" id="welcome-text">
-        <!--Text introducing website, giving more info, convincing you to join-->
-        <p class="col-md-10 mx-auto">
-          Hypatia a very small stage in a vast cosmic arena decipherment take
-          root and flourish Drake Equation Vangelis. With pretty stories for
-          which there's little good evidence paroxysm of global death permanence
-          of the stars the only home we've ever known something incredible is
-          waiting to be known rich in mystery. Kindling the energy hidden in
-          matter concept of the number one vastness is bearable only through
-          love great turbulent clouds hundreds of thousands citizens of distant
-          epochs. Shores of the cosmic ocean prime number Euclid globular star
-          cluster brain is the seed of intelligence great turbulent clouds. Bits
-          of moving fluff laws of physics are creatures of the cosmos kindling
-          the energy hidden in matter hydrogen atoms hundreds of thousands.
-          Inconspicuous motes of rock and gas Sea of Tranquility the carbon in
-          our apple pies kindling the energy hidden in matter hydrogen atoms are
-          creatures of the cosmos and billions upon billions upon billions upon
-          billions upon billions upon billions upon billions.
-        </p>
-      </div>
+      <section>
+        <div class="container mt-5" id="welcome-text">
+          <!--Text introducing website, giving more info, convincing you to join-->
+          <p>
+            Hypatia a very small stage in a vast cosmic arena decipherment take
+            root and flourish Drake Equation Vangelis. With pretty stories for
+            which there's little good evidence paroxysm of global death
+            permanence of the stars the only home we've ever known something
+            incredible is waiting to be known rich in mystery. Kindling the
+            energy hidden in matter concept of the number one vastness is
+            bearable only through love great turbulent clouds hundreds of
+            thousands citizens of distant epochs. Shores of the cosmic ocean
+            prime number Euclid globular star cluster brain is the seed of
+            intelligence great turbulent clouds. Bits of moving fluff laws of
+            physics are creatures of the cosmos kindling the energy hidden in
+            matter hydrogen atoms hundreds of thousands. Inconspicuous motes of
+            rock and gas Sea of Tranquility the carbon in our apple pies
+            kindling the energy hidden in matter hydrogen atoms are creatures of
+            the cosmos and billions upon billions upon billions upon billions
+            upon billions upon billions upon billions.
+          </p>
+        </div>
+      </section>
 
       <section class="row p-3 m-2" id="price-plans">
         <!-- Three cards presenting the price plans-->
-        <div class="price-plan col-md-3" id="plan1">
-          <div><h3>€3</h3></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ipsa
-            ipsum esse, error quia enim! Deleniti libero, perferendis ipsa illo
-            delectus saepe rerum id. Blanditiis quasi distinctio quibusdam
-            provident? Earum?
-          </p>
+        <div class="price-plan col-md-3 mt-4" id="plan1">
+          <div class="price-plan-title">
+            <p>Entry Package</p>
+          </div>
+          <div class="price-plan-amount"><p>€3</p></div>
+          <div class="price-plan-description">
+            <ul>
+              <li>It's OK</li>
+              <li>You get the basic stuff</li>
+              <li>Swag</li>
+              <li>Swag</li>
+              <li>Swag</li>
+              <li>Swag</li>
+            </ul>
+          </div>
+          <div class="price-plan-join">
+            <a href="signup.html"><button type="button">Join now!</button></a>
+          </div>
         </div>
-        <div class="price-plan col-md-3" id="plan2">
-          <h3>€10</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ipsa
-            ipsum esse, error quia enim! Deleniti libero, perferendis ipsa illo
-            delectus saepe rerum id. Blanditiis quasi distinctio quibusdam
-            provident? Earum?
-          </p>
+        <div class="price-plan col-md-3 mt-4" id="plan2">
+          <div class="price-plan-title">
+            <p>Standard Package</p>
+          </div>
+          <div class="price-plan-amount"><p>€10</p></div>
+          <div class="price-plan-description">
+            <ul>
+              <li>It's better</li>
+              <li>You get more stuff</li>
+              <li>Access to the community forum</li>
+              <li>Blog posts / discussions included in the recipes</li>
+              <li>Swag</li>
+              <li>Swag</li>
+            </ul>
+          </div>
+          <div class="price-plan-join">
+            <a href="signup.html"><button type="button">Join now!</button></a>
+          </div>
         </div>
-        <div class="price-plan col-md-3" id="plan3">
-          <h3>€20</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ipsa
-            ipsum esse, error quia enim! Deleniti libero, perferendis ipsa illo
-            delectus saepe rerum id. Blanditiis quasi distinctio quibusdam
-            provident? Earum?
-          </p>
+        <div class="price-plan col-md-3 mt-4" id="plan3">
+          <div class="price-plan-title">
+            <p>Premium Package</p>
+          </div>
+          <div class="price-plan-amount"><p>€20</p></div>
+          <div class="price-plan-description">
+            <ul>
+              <li>It's great</li>
+              <li>You get all the stuff</li>
+              <li>Preview access to new recipes before other users</li>
+              <li>Can vote on improvements / upcoming features</li>
+              <li>Swag</li>
+            </ul>
+          </div>
+          <div class="price-plan-join">
+            <a href="signup.html"><button type="button">Join now!</button></a>
+          </div>
         </div>
       </section>
     </main>
@@ -92,23 +124,28 @@
     <footer
       class="container-fluid row justify-content-around align-items-center mt-5 p-2"
     >
-      <!--Footer with contact info maybe? Links to socials and such-->
+      <!-- Footer with links and contact info -->
       <div class="col-sm-2">
-        <p>Logo</p>
+        <img src="../images/chef-hat-icon.png" />
       </div>
       <div class="col-sm-2">
-        <p>About</p>
+        <p><a href="about.html">About</a></p>
       </div>
       <div class="col-sm-2">
-        <p>Terms & Conditions</p>
+        <p><a href="terms.html">Terms / Conditions</a></p>
+        <!-- Need a link for this -->
       </div>
       <div class="col-sm-2">
-        <p>FAQ</p>
+        <p><a href="faq.html">FAQ</a></p>
       </div>
       <div class="col-sm-2">
-        <p>Emails</p>
+        <p>
+          <a href="mailto:zuzanna.chadzinska2@mail.dcu.ie"
+            >Zuzanna Chadzińska</a
+          >
+        </p>
+        <p><a href="mailto:liam.doyle72@mail.dcu.ie">Liam Doyle</a></p>
       </div>
     </footer>
-
   </body>
 </html>
