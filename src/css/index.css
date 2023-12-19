@@ -157,12 +157,12 @@ footer > div > img {
   height: 60px;
 }
 
-/* Remove default link styling */
-footer > div > p > a {
+/* Remove default link styling */ /*edit: remove it for all links*/
+a {
   text-decoration: none;
   color: inherit;
 }
-footer > div > p > a:visited {
+a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -181,4 +181,16 @@ footer > div > p > a:visited {
   color: var(--darkgreen);
   background-color: var(--green);
   border-color: var(--darkgreen); 
+}
+
+.form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 15px; 
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
