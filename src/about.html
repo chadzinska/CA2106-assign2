@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" type="image/x-icon" href="../images/chef-hat-icon.png" />
     <!--Makes the tab have an icon-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -13,8 +12,74 @@
     <!-- Import Bootsrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Import Bootstrap JS -->
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
-    <h1>about</h1>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"> <!--icon-->
+            <img src="../images/chef-hat-icon.png" height="50px" alt="Recipe site logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="recipelist.html">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="howto.html">Tips&Tricks</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profile
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">My profile</a></li>
+                  <li><a class="dropdown-item" href="#">Subscription</a></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      
+    <main>
+        <h1>about</h1>
+    </main>
+
+
+    <footer
+      class="container-fluid row justify-content-around align-items-center mt-5 p-2"
+    >
+      <!-- Footer with links and contact info -->
+      <div class="col-sm-2">
+        <img src="../images/chef-hat-icon.png" />
+      </div>
+      <div class="col-sm-2">
+        <p><a href="about.html">About</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p><a href="termsconditions.html">Terms & Conditions</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p><a href="faq.html">FAQ</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p>
+          <a href="mailto:zuzanna.chadzinska2@mail.dcu.ie"
+            >Zuzanna Chadzińska</a
+          >
+        </p>
+        <p><a href="mailto:liam.doyle72@mail.dcu.ie">Liam Doyle</a></p>
+      </div>
+    </footer>
 </body>
 </html>

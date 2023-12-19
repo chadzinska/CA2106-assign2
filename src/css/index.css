@@ -16,8 +16,14 @@ getting some things to fit just right has meant needing to use !important a few 
 }
 
 body {
-  /*just to have something*/
   background: var(--white);
+  min-height: 100vh;    /*body has to take up at least whole screen*/
+  display: flex;        /*flex container with column layout, done to push footer to the bottom*/
+  flex-direction: column;
+}
+
+main {
+  flex: 1;  /*makes main take up remaining available space - pushes footer to the bottom*/
 }
 
 p {
@@ -159,4 +165,20 @@ footer > div > p > a {
 footer > div > p > a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+
+.custom-navbar {
+  background-color: var(--pink);
+}
+
+#search-btn {   /*Search button custom colour*/
+  color: var(--darkgreen);
+  border-color: var(--darkgreen); 
+}
+
+#search-btn:hover {
+  color: var(--darkgreen);
+  background-color: var(--green);
+  border-color: var(--darkgreen); 
 }
