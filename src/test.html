@@ -1,34 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe website</title>
+    <!--We have to think of a name, gonna use placeholder Recipe website for now-->
     <link rel="icon" type="image/x-icon" href="../images/chef-hat-icon.png" />
     <!--Makes the tab have an icon-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Import JQuery, maybe download and host instead -->
-    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/>
     <!-- Import Bootsrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Import Bootstrap JS -->
-</head>
-<body>
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</body>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header class="container-fluid row justify-content-around align-items-center pt-4">
+      <div class="col-lg-5" id="logo-container">
+        <!-- Replace this with logo image, styling shouldn't have to change much -->
+      </div>
+      <div class="col-md-3 text-center">
+        <h1>Get cooking today!</h1>
+        <!-- Maybe we get a better slogan -->
+      </div>
+      <div class="col-md-3 text-center" id="buttons">
+        <button class="btn btn-outline-success" id="login"><a href="login.html">Log in</a></button>
+        <button class="btn btn-outline-success" id="signup"><a href="signup.html">Sign up</a></button>
+      </div>
+    </header>
+    <main><section>
+      <div class="container mt-5" id="welcome-text">
+        <!--Text introducing website, giving more info, convincing you to join-->
+        <p>
+          Hypatia a very small stage in a vast cosmic arena decipherment take
+          root and flourish Drake Equation Vangelis. With pretty stories for
+          which there's little good evidence paroxysm of global death
+          permanence of the stars the only home we've ever known something
+          incredible is waiting to be known rich in mystery. Kindling the
+          energy hidden in matter concept of the number one vastness is
+          bearable only through love great turbulent clouds hundreds of
+          thousands citizens of distant epochs. Shores of the cosmic ocean
+          prime number Euclid globular star cluster brain is the seed of
+          intelligence great turbulent clouds. Bits of moving fluff laws of
+          physics are creatures of the cosmos kindling the energy hidden in
+          matter hydrogen atoms hundreds of thousands. Inconspicuous motes of
+          rock and gas Sea of Tranquility the carbon in our apple pies
+          kindling the energy hidden in matter hydrogen atoms are creatures of
+          the cosmos and billions upon billions upon billions upon billions
+          upon billions upon billions upon billions.
+        </p>
+      </div>
+    </section>
+
+    <section class="row p-3 m-2" id="price-plans">
+      <!-- Three cards presenting the price plans-->
+      <div class="price-plan col-md-3 mt-4" id="plan1">
+        <div class="price-plan-title">
+          <p>Entry Package</p>
+        </div>
+        <div class="price-plan-amount"><p>€3</p></div>
+        <div class="price-plan-description">
+          <ul>
+            <li>It's OK</li>
+            <li>You get the basic stuff</li>
+            <li>Swag</li>
+            <li>Swag</li>
+            <li>Swag</li>
+            <li>Swag</li>
+          </ul>
+        </div>
+        <div class="price-plan-join">
+          <a href="signup.html"><button type="button">Join now!</button></a>
+        </div>
+      </div>
+      <div class="price-plan col-md-3 mt-4" id="plan2">
+        <div class="price-plan-title">
+          <p>Standard Package</p>
+        </div>
+        <div class="price-plan-amount"><p>€10</p></div>
+        <div class="price-plan-description">
+          <ul>
+            <li>It's better</li>
+            <li>You get more stuff</li>
+            <li>Access to the community forum</li>
+            <li>Blog posts / discussions included in the recipes</li>
+            <li>Swag</li>
+            <li>Swag</li>
+          </ul>
+        </div>
+        <div class="price-plan-join">
+          <a href="signup.html"><button type="button">Join now!</button></a>
+        </div>
+      </div>
+      <div class="price-plan col-md-3 mt-4" id="plan3">
+        <div class="price-plan-title">
+          <p>Premium Package</p>
+        </div>
+        <div class="price-plan-amount"><p>€20</p></div>
+        <div class="price-plan-description">
+          <ul>
+            <li>It's great</li>
+            <li>You get all the stuff</li>
+            <li>Preview access to new recipes before other users</li>
+            <li>Can vote on improvements / upcoming features</li>
+            <li>Swag</li>
+          </ul>
+        </div>
+        <div class="price-plan-join">
+          <a href="signup.html"><button type="button">Join now!</button></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="container-fluid text-center mt-5"> <!-- Footer with links and contact info -->
+
+      <div class="row justify-content-start align-items-center p-2">
+        <div class="col col-md-3">
+          <img src="../images/chef-hat-icon.png" height="50px"/>
+        </div>
+        <div class="col-4 col-md-3">
+          <p><a href="about.html">About</a></p>
+        </div>
+        <div class="col-4 col-md-3">
+          <p><a href="termsconditions.html">Terms & Conditions</a></p>
+        </div>
+        <div class="col-4 col-md-3">
+          <p><a href="faq.html">FAQ</a></p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center mt-1 p-2">
+        <div class="col">
+          <p><a href="mailto:zuzanna.chadzinska2@mail.dcu.ie">Zuzanna Chadzińska</a> &#8226 <a href="mailto:liam.doyle72@mail.dcu.ie">Liam Doyle</a></p>
+        </div>
+      </div>
+
+    </footer>
+  </body>
 </html>
