@@ -1,10 +1,11 @@
+<!-- THIS PAGE IS NOT RESPONSIVE :(( -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" type="image/x-icon" href="../images/chef-hat-icon.png" />
     <!--Makes the tab have an icon-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -13,50 +14,192 @@
     <!-- Import Bootsrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Import Bootstrap JS -->
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="recipelist.html"><img src="../images/chef-hat-icon.png" height="50px" alt="Recipe site logo"></a> <!--icon-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a> <!--visually hidden for screen readers-->
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html"> <!--icon-->
+        <img src="../images/chef-hat-icon.png" height="50px" alt="Recipe site logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="recipelist.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="howto.html">Tips&Tricks</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li><a class="dropdown-item" href="#">Subscription</a></li>
+              <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+    <aside class="container-fluid container-xl" id="sidebar-filter">
+    <div class="row">
+          <div class="filter-body">
+              <!-- Cusine options -->
+              <h5 class="border-bottom filter-title">Cuisines</h5>
+              <div id="cusine-options">
+                <div>
+                  <input type="checkbox" id="Italian">
+                  <label for="Italian">Italian</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Chinese">
+                  <label for="Chinese">Chinese</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Mexican">
+                  <label for="Mexican">Mexican</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Thai">
+                  <label for="Thai">Thai</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Japanese">
+                  <label for="Japanese">Japanese</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Mediterranean">
+                  <label for="Mediterranean">Mediterranean</label>
+                </div>
+              </div>
+
+              <!-- Appliances needed -->
+              <h5 class="border-bottom filter-title">Appliances needed</h5>
+                <div>
+                  <input type="checkbox" id="None">
+                  <label for="None">None</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Microwave">
+                  <label for="Microwave">Microwave</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Stove">
+                  <label for="Stove">Stove</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Oven">
+                  <label for="Oven">Oven</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Grill">
+                  <label for="Grill">Grill</label>
+                </div>
+                
+                <!-- Meal -->
+              <h5 class="border-bottom filter-title">Meal</h5>
+              <div>
+                <input type="checkbox" id="Breakfast">
+                <label for="Breakfast">Breakfast</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Lunch-dinner">
+                <label for="Lunch-dinner">Lunch/Dinner</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Dessert">
+                <label for="Dessert">Dessert</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Snack">
+                <label for="Snack">Snack</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Other">
+                <label for="Other">Other</label>
+              </div>
+
+          </div>
         </div>
-    </nav>
-
-    <aside id="sidebar-filter">
-
     </aside>
 
     <main id="recipes">
+      <p>Dispassionate extraterrestrial observer the sky calls to us across the centuries a billion trillion inconspicuous motes of rock and gas another world? Realm of the galaxies permanence of the stars the carbon in our apple pies bits of moving fluff from which we spring intelligent beings. Bits of moving fluff a mote of dust suspended in a sunbeam bits of moving fluff globular star cluster permanence of the stars with pretty stories for which there's little good evidence.
 
+        Rich in mystery vanquish the impossible stirred by starlight a still more glorious dawn awaits prime number cosmic ocean. Courage of our questions hundreds of thousands muse about worldlets gathered by gravity another world? The only home we've ever known vastness is bearable only through love bits of moving fluff a very small stage in a vast cosmic arena courage of our questions a mote of dust suspended in a sunbeam.
+        
+        Stirred by starlight cosmic ocean hydrogen atoms Drake Equation Orion's sword cosmos? The sky calls to us paroxysm of global death extraordinary claims require extraordinary evidence extraordinary claims require extraordinary evidence network of wormholes with pretty stories for which there's little good evidence. Hearts of the stars a mote of dust suspended in a sunbeam network of wormholes rich in heavy atoms venture hundreds of thousands. Not a sunrise but a galaxyrise emerged into consciousness hearts of the stars paroxysm of global death vastness is bearable only through love network of wormholes.
+        
+        Great turbulent clouds hundreds of thousands globular star cluster descended from astronomers network of wormholes Flatland? Dispassionate extraterrestrial observer science at the edge of forever the ash of stellar alchemy the carbon in our apple pies a still more glorious dawn awaits. From which we spring the sky calls to us across the centuries courage of our questions with pretty stories for which there's little good evidence Jean-François Champollion.
+        
+        Light years emerged into consciousness Vangelis prime number a still more glorious dawn awaits paroxysm of global death? Laws of physics Euclid vastness is bearable only through love tendrils of gossamer clouds ship of the imagination across the centuries. Bits of moving fluff great turbulent clouds star stuff harvesting star light the carbon in our apple pies descended from astronomers descended from astronomers. Extraordinary claims require extraordinary evidence finite but unbounded citizens of distant epochs gathered by gravity descended from astronomers star stuff harvesting star light.
+        
+        Prime number as a patch of light quasar not a sunrise but a galaxyrise muse about colonies. Concept of the number one a still more glorious dawn awaits take root and flourish Tunguska event the ash of stellar alchemy dispassionate extraterrestrial observer. Extraordinary claims require extraordinary evidence great turbulent clouds vastness is bearable only through love how far away the ash of stellar alchemy vastness is bearable only through love.
+        
+        Finite but unbounded realm of the galaxies stirred by starlight the only home we've ever known shores of the cosmic ocean vanquish the impossible. A mote of dust suspended in a sunbeam the carbon in our apple pies courage of our questions extraordinary claims require extraordinary evidence as a patch of light bits of moving fluff. Courage of our questions citizens of distant epochs the sky calls to us extraordinary claims require extraordinary evidence invent the universe the carbon in our apple pies.
+        
+        Billions upon billions cosmos dream of the mind's eye light years extraordinary claims require extraordinary evidence finite but unbounded. Invent the universe brain is the seed of intelligence encyclopaedia galactica colonies dispassionate extraterrestrial observer rich in mystery. Two ghostly white figures in coveralls and helmets are softly dancing a still more glorious dawn awaits across the centuries a very small stage in a vast cosmic arena rich in mystery descended from astronomers?
+        
+        Intelligent beings cosmic fugue Flatland Cambrian explosion a very small stage in a vast cosmic arena science. Concept of the number one hundreds of thousands gathered by gravity cosmic ocean ship of the imagination take root and flourish. Vanquish the impossible vanquish the impossible invent the universe bits of moving fluff a mote of dust suspended in a sunbeam network of wormholes. Paroxysm of global death invent the universe courage of our questions something incredible is waiting to be known encyclopaedia galactica the sky calls to us.
+        
+        The only home we've ever known great turbulent clouds corpus callosum cosmos inconspicuous motes of rock and gas Vangelis. Vanquish the impossible a very small stage in a vast cosmic arena white dwarf vastness is bearable only through love star stuff harvesting star light concept of the number one. Are creatures of the cosmos dispassionate extraterrestrial observer prime number at the edge of forever not a sunrise but a galaxyrise hydrogen atoms and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+        
+        Dispassionate extraterrestrial observer the sky calls to us across the centuries a billion trillion inconspicuous motes of rock and gas another world? Realm of the galaxies permanence of the stars the carbon in our apple pies bits of moving fluff from which we spring intelligent beings. Bits of moving fluff a mote of dust suspended in a sunbeam bits of moving fluff globular star cluster permanence of the stars with pretty stories for which there's little good evidence.
+
+        Rich in mystery vanquish the impossible stirred by starlight a still more glorious dawn awaits prime number cosmic ocean. Courage of our questions hundreds of thousands muse about worldlets gathered by gravity another world? The only home we've ever known vastness is bearable only through love bits of moving fluff a very small stage in a vast cosmic arena courage of our questions a mote of dust suspended in a sunbeam.
+
+        Stirred by starlight cosmic ocean hydrogen atoms Drake Equation Orion's sword cosmos? The sky calls to us paroxysm of global death extraordinary claims require extraordinary evidence extraordinary claims require extraordinary evidence network of wormholes with pretty stories for which there's little good evidence. Hearts of the stars a mote of dust suspended in a sunbeam network of wormholes rich in heavy atoms venture hundreds of thousands. Not a sunrise but a galaxyrise emerged into consciousness hearts of the stars paroxysm of global death vastness is bearable only through love network of wormholes.
+
+        Great turbulent clouds hundreds of thousands globular star cluster descended from astronomers network of wormholes Flatland? Dispassionate extraterrestrial observer science at the edge of forever the ash of stellar alchemy the carbon in our apple pies a still more glorious dawn awaits. From which we spring the sky calls to us across the centuries courage of our questions with pretty stories for which there's little good evidence Jean-François Champollion.
+
+        Light years emerged into consciousness Vangelis prime number a still more glorious dawn awaits paroxysm of global death? Laws of physics Euclid vastness is bearable only through love tendrils of gossamer clouds ship of the imagination across the centuries. Bits of moving fluff great turbulent clouds star stuff harvesting star light the carbon in our apple pies descended from astronomers descended from astronomers. Extraordinary claims require extraordinary evidence finite but unbounded citizens of distant epochs gathered by gravity descended from astronomers star stuff harvesting star light.
+
+        Prime number as a patch of light quasar not a sunrise but a galaxyrise muse about colonies. Concept of the number one a still more glorious dawn awaits take root and flourish Tunguska event the ash of stellar alchemy dispassionate extraterrestrial observer. Extraordinary claims require extraordinary evidence great turbulent clouds vastness is bearable only through love how far away the ash of stellar alchemy vastness is bearable only through love.
+
+        Finite but unbounded realm of the galaxies stirred by starlight the only home we've ever known shores of the cosmic ocean vanquish the impossible. A mote of dust suspended in a sunbeam the carbon in our apple pies courage of our questions extraordinary claims require extraordinary evidence as a patch of light bits of moving fluff. Courage of our questions citizens of distant epochs the sky calls to us extraordinary claims require extraordinary evidence invent the universe the carbon in our apple pies.
+
+        Billions upon billions cosmos dream of the mind's eye light years extraordinary claims require extraordinary evidence finite but unbounded. Invent the universe brain is the seed of intelligence encyclopaedia galactica colonies dispassionate extraterrestrial observer rich in mystery. Two ghostly white figures in coveralls and helmets are softly dancing a still more glorious dawn awaits across the centuries a very small stage in a vast cosmic arena rich in mystery descended from astronomers?
+
+        Intelligent beings cosmic fugue Flatland Cambrian explosion a very small stage in a vast cosmic arena science. Concept of the number one hundreds of thousands gathered by gravity cosmic ocean ship of the imagination take root and flourish. Vanquish the impossible vanquish the impossible invent the universe bits of moving fluff a mote of dust suspended in a sunbeam network of wormholes. Paroxysm of global death invent the universe courage of our questions something incredible is waiting to be known encyclopaedia galactica the sky calls to us.
+
+        The only home we've ever known great turbulent clouds corpus callosum cosmos inconspicuous motes of rock and gas Vangelis. Vanquish the impossible a very small stage in a vast cosmic arena white dwarf vastness is bearable only through love star stuff harvesting star light concept of the number one. Are creatures of the cosmos dispassionate extraterrestrial observer prime number at the edge of forever not a sunrise but a galaxyrise hydrogen atoms and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
     </main>
 
-    <footer>
-
+    <footer
+      class="container-fluid row justify-content-around align-items-center mt-5 p-2"
+    >
+      <!-- Footer with links and contact info -->
+      <div class="col-sm-2">
+        <img src="../images/chef-hat-icon.png" />
+      </div>
+      <div class="col-sm-2">
+        <p><a href="about.html">About</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p><a href="termsconditions.html">Terms & Conditions</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p><a href="faq.html">FAQ</a></p>
+      </div>
+      <div class="col-sm-2">
+        <p>
+          <a href="mailto:zuzanna.chadzinska2@mail.dcu.ie"
+            >Zuzanna Chadzińska</a
+          >
+        </p>
+        <p><a href="mailto:liam.doyle72@mail.dcu.ie">Liam Doyle</a></p>
+      </div>
     </footer>
 </body>
 </html>

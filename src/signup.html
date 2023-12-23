@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-	<link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" type="image/x-icon" href="../images/chef-hat-icon.png" />
     <!--Makes the tab have an icon-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -13,50 +12,56 @@
     <!-- Import Bootsrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Import Bootstrap JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Import Bootstrap icons -->
+	<link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
-    <section>
-		<div>
-			<h3>Sign Up</h3>		 <!--Title at da top-->
-		</div>
-
+	<div class="back-arrow">
+        <a href="index.html"> <i class="bi bi-arrow-left-circle"></i></a>
+    </div>
+    
+    <section class="form-container">
 		<form id="signup-form">
 			<div>
-				<label for="uname">Username</label>
-				<input id="uname" name="uname" type="text" placeholder="Enter username" required>
+				<h4>Sign Up</h4>		 <!--Title at da top-->
+			</div>
+			<div class="mb-3">
+				<label for="uname" class="form-label">Username</label>
+				<input class="form-control" id="uname" name="uname" type="text" placeholder="Enter username" required>
 			</div>
 
-            <div class="form-group">
-				<label for="email">Email</label>
-		        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+            <div class="mb-3">
+				<label for="email" class="form-label">Email</label>
+		        <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email" required>
 		    </div>
 
-		    <div class="form-group">
-		        <label for="pass">Password</label>
-		        <input id="pass" name="pass" type="password" placeholder="Enter a password" required
+		    <div class="mb-3">
+		        <label for="pass" class="form-label">Password</label>
+		        <input class="form-control" id="pass" name="pass" type="password" placeholder="Enter a password" required
 				pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 				<!--<p>Your password must contain:<br>- An uppercase letter<br>- A lowercase letter<br>- A number</p>-->
 				<!--not sure how to make this look nice, we can skip it if it's too much of a pain in the ass-->
 		    </div>
 
-            <div class="form-group">
-		        <label for="rep-pass">Repeat password</label>
-		        <input id="rep-pass" name="rep-pass" type="password" placeholder="Repeat the password" required>
+            <div class="mb-3">
+		        <label for="rep-pass" class="form-label">Repeat password</label>
+		        <input class="form-control" id="rep-pass" name="rep-pass" type="password" placeholder="Repeat the password" required>
 		    </div>
 
-		    <div>
-				<button type="submit" value="signup"><a href="recipelist.html">Sign up</a></button>		<!--Sign up button-->
+		    <div class="mb-3">
+				<button class="btn btn-outline-success" type="submit" value="signup"><a href="recipelist.html">Sign up</a></button>		<!--Sign up button-->
 			</div>
 
-			<div>
-				<div">
-					<label><input type="checkbox" name="remember">Remember Me</label>		<!--Remember me-->
-				</div>
 			
-				<div>
-					<a href="forgotpass.html">Forgot Password</a>		<!--Forgot password-->
-				</div>
+			<div class="mb-3">
+				<label><input class="form-check-label" type="checkbox" name="remember">Remember Me</label>		<!--Remember me-->
 			</div>
+			
+			<div class="mb-3">
+				<a href="forgotpass.html">Forgot Password</a>		<!--Forgot password-->
+			</div>
+			
 		</form>
 
 		<p>Already have an account? <a href="login.html">Login</a></p>		<!--Link to sign up-->
