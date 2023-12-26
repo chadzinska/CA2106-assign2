@@ -58,13 +58,6 @@ header {
   padding: 15px;
 }
 
-@media screen and (max-width: 576px /* Bootstrap "small" breakpoint */) {
-  #welcome-text {
-    border-radius: 0;
-  }
-}
-/* This makes the border of the welcome text get rid of its curves once it takes up the whole width of the screen */
-
 /* Styling the Price Plan part */
 /* Lot of custom padding used here, need to come back and condense it */
 
@@ -268,18 +261,71 @@ a:visited {
   text-align: center;
   border: 2px solid var(--black);
   border-radius: 15px;
+  height: 100%;
 }
 
-.recipe-top-section-title {
+.recipe-top-section-title,
+#instructions-title {
   text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
     -1px 1px 0 var(--white), 1px 1px 0 var(--white);
 }
 
 #recipe-photo {
-  border-radius: 10px;
   border: 2px solid var(--black);
+  border-radius: 10px;
+}
+
+.rant-text,
+.recipe-text,
+.recipe-overview-text,
+.recipe-instructions {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 10px;
+}
+
+.recipe-text > ul {
+  list-style-type: square;
+  text-align: left;
+
+  padding-right: 10%;
 }
 
 .rant-text {
   text-align: left;
+  padding: 6px 10px 6px 10px;
 }
+
+.recipe-instructions {
+  background-color: var(--lightpink);
+}
+
+#instructions-title {
+  text-align: center;
+}
+
+#instructions-text {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 10px;
+}
+
+#instructions-text > div > ol > li {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px /* Bootstrap small breakpoint */) {
+  #welcome-text {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px /* Bootstrap medium breakpoint */) {
+  #recipe-top-section > div,
+  .recipe-instructions {
+    border-radius: 0;
+  }
+}
+
+/* This makes the border of the selected elements get rid of their curves once they take up the whole width of the screen */
+/* Keep these at the bottom so they get priority in the cascade */
