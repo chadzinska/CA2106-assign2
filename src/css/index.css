@@ -194,24 +194,6 @@ a:visited {
   align-items: center;
 }
 
-/* Recipe-list */
-#sidebar-filter {
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 85px; /* how far from the top*/
-  left: 10px; /* and left*/
-  background: var(--lightpink);
-  overflow-x: hidden;
-  padding: 6px 8px 6px 16px;
-}
-
-/*body of recipe-list site*/
-#recipes {
-  margin-left: 180px;
-  padding: 0 80px 0 20px;
-}
-
 /*FAQ button styling*/
 .collapsible {
   background-color: var(--lightpink);
@@ -365,7 +347,7 @@ a:visited {
   text-align: center;
   border: 2px solid var(--black);
   border-radius: 15px;
-  height: 265px;
+  height: 215px;
 }
 
 #shop-heading,
@@ -396,6 +378,62 @@ a:visited {
 .cart-item-price {
   text-align: center;
   font-weight: bold;
+}
+
+/* Recipe list */
+.recipe-filters {
+  background-color: var(--lightpink);
+  text-align: center;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  height: 555px;
+}
+
+.recipe-link {
+  display: flex;
+}
+
+/* rotates the arrow icon by 180 */
+.icon-rotate-180 {
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* overrides bootstrap color for pagination */
+.page-item.active, .page-item {
+  --bs-pagination-active-bg: var(--darkgreen);
+  --bs-pagination-active-border-color: var(--darkgreen);
+  --bs-pagination-focus-color: var(--darkgreen);
+  --bs-pagination-hover-color: var(--darkgreen);
+}
+
+.nav-link {
+  color: var(--black);
+}
+
+#tcnavbar.nav-link:hover {
+  color: var(--pink);
+}
+
+#tc-navbar {
+  background-color: var(--lightpink);
+  margin-right: 20px;
+}
+
+#tc-main {
+  margin-right: 30px;
+}
+
+/* hides scrollspy on smaller screens */
+@media screen and (max-width: 768px /* Bootstrap medium breakpoint */) {
+  #tc-nav-cont {
+    display:none;
+  }
 }
 
 @media screen and (max-width: 576px /* Bootstrap small breakpoint */) {
