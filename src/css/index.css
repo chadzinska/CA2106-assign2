@@ -64,7 +64,6 @@ header {
 /* Makes the hat logo sit in the middle of the circle */
 
 #welcome-text {
-  /*also just to have something*/
   background-color: var(--lightpink);
   border: 2px solid var(--black);
   border-radius: 20px;
@@ -451,6 +450,13 @@ a:visited {
 
 #tc-main {
   margin-right: 30px;
+}
+
+.about-card {
+  background-color: var(--lightpink);
+  border: 2px solid var(--black);
+  border-radius: 20px;
+  padding: 15px;
 }
 
 /* hides scrollspy on smaller screens */
