@@ -102,18 +102,15 @@
       </div>
 
       <section class="row justify-content-around mt-5">
-        <div class="col-md-3">
+        <div class="col-md-3" id="checkout-info">
           <div><h2>Checkout info</h2></div>
-          <div>
-            <p>Subtotal:</p>
+          <div class="pb-2">
+            <p>Subtotal: €<span id="subtotal">0</span></p>
             <p>Input Address to Estimate Shipping:</p>
+            <input type="text" />
           </div>
           <div>
-            <p>Estimated Shipping Cost:</p>
-            <p>Total:</p>
-          </div>
-          <div>
-            <button>Checkout</button>
+            <button id="checkout-button">Checkout</button>
           </div>
         </div>
         <div class="col-md-6" id="cart-item-list">
@@ -138,7 +135,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€25</p>
+              <p>€<span id="pie-tin-price-cart">25</span></p>
               <div></div>
               <div></div>
             </div>
@@ -164,7 +161,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€550</p>
+              <p>€<span id="barbeque-price-cart">550</span></p>
               <div></div>
               <div></div>
             </div>
@@ -190,7 +187,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€10</p>
+              <p>€<span id="spoon-price-cart">10</span></p>
               <div></div>
               <div></div>
             </div>
@@ -219,7 +216,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€400</p>
+              <p>€<span id="stand-mixer-price-cart">400</span></p>
               <div></div>
               <div></div>
             </div>
@@ -248,7 +245,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€50</p>
+              <p>€<span id="dutch-oven-price-cart">50</span></p>
               <div></div>
               <div></div>
             </div>
@@ -277,7 +274,7 @@
               <div></div>
               <div></div>
               <p>Price:</p>
-              <p>€30</p>
+              <p>€<span id="frying-pan-price-cart">30</span></p>
               <div></div>
               <div></div>
             </div>

@@ -42,13 +42,26 @@ header {
 
 #logo-container {
   background-color: var(--green);
-  border-radius: 100%;
+  border-radius: 50%;
   height: 300px;
   width: 300px;
   border: 5px solid;
   border-color: var(--darkgreen);
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-/* This will be replaced with the logo image, just needed a fancy circle for now */
+
+#logo-container > img {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Makes the hat logo sit in the middle of the circle */
 
 #welcome-text {
   /*also just to have something*/
@@ -317,7 +330,8 @@ a:visited {
 .shop-item-add > button,
 .cart-remove > button,
 #to-cart-button,
-#to-shop-button {
+#to-shop-button,
+#checkout-info > div > button {
   font-weight: bold;
   padding: 10px;
   border-radius: 15px;
@@ -337,7 +351,8 @@ a:visited {
 }
 
 #to-cart-button:hover,
-#to-shop-button:hover {
+#to-shop-button:hover,
+#checkout-info > div > button:hover {
   background-color: var(--pink);
   color: var(--white);
 }
@@ -357,6 +372,15 @@ a:visited {
   color: var(--lightpink);
   text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
     -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+#checkout-info {
+  background-color: var(--green);
+  text-align: center;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  padding: 20px;
+  max-height: 250px;
 }
 
 .cart-item {
