@@ -270,7 +270,9 @@ a:visited {
     -1px 1px 0 var(--white), 1px 1px 0 var(--white);
 }
 
-#recipe-photo {
+#recipe-photo,
+.shop-photo,
+.cart-photo {
   border: 2px solid var(--black);
   border-radius: 10px;
 }
@@ -314,6 +316,88 @@ a:visited {
   margin-bottom: 15px;
 }
 
+/* Shop time */
+
+.shop-item {
+  background-color: var(--green);
+  text-align: center;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  height: 100%;
+}
+
+.shop-item-add {
+  border-radius: 0px 0px 13px 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.shop-item-add > button,
+.cart-remove > button,
+#to-cart-button,
+#to-shop-button {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid var(--black);
+  background-color: var(--white);
+}
+
+.shop-item-add > button:hover,
+.cart-remove > button:hover {
+  background-color: var(--darkgreen);
+  color: var(--white);
+}
+
+#to-cart-button,
+#to-shop-button {
+  background-color: var(--green);
+}
+
+#to-cart-button:hover,
+#to-shop-button:hover {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.shop-filters {
+  background-color: var(--lightpink);
+  text-align: center;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  height: 265px;
+}
+
+#shop-heading,
+#cart-heading {
+  text-align: center;
+  font-size: 60px;
+  color: var(--lightpink);
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.cart-item {
+  background-color: var(--pink);
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid var(--black);
+}
+
+.cart-item-title {
+  height: auto;
+  padding-left: 20px;
+}
+
+.cart-item-title > h5 {
+  text-align: center;
+}
+
+.cart-item-price {
+  text-align: center;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 576px /* Bootstrap small breakpoint */) {
   #welcome-text {
     border-radius: 0;
@@ -322,7 +406,8 @@ a:visited {
 
 @media screen and (max-width: 768px /* Bootstrap medium breakpoint */) {
   #recipe-top-section > div,
-  .recipe-instructions {
+  .recipe-instructions,
+  .cart-item {
     border-radius: 0;
   }
 }
