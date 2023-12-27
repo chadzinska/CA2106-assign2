@@ -89,7 +89,18 @@
     </nav>
 
     <main>
-      <h1 id="cart-heading">Shopping Cart</h1>
+      <div class="row align-items-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+          <h1 id="cart-heading">Shopping Cart</h1>
+        </div>
+        <div class="col-md-2">
+          <a href="shop.html">
+            <button id="to-shop-button">Return to Shop</button>
+          </a>
+        </div>
+      </div>
+
       <section class="row justify-content-around mt-5">
         <div class="col-md-3">
           <div><h2>Checkout info</h2></div>
@@ -106,7 +117,7 @@
           </div>
         </div>
         <div class="col-md-6" id="cart-item-list">
-          <div class="cart-item row mb-2 align-items-center">
+          <div class="cart-item row mb-2 align-items-center" id="cart-pie-tin">
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Pie Tin</h5>
               <img
@@ -117,7 +128,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="pie-tin-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -130,7 +143,7 @@
               <div></div>
             </div>
           </div>
-          <div class="cart-item row mb-2 align-items-center">
+          <div class="cart-item row mb-2 align-items-center" id="cart-barbeque">
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Gas Barbeque</h5>
               <img
@@ -141,7 +154,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="barbeque-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -154,7 +169,7 @@
               <div></div>
             </div>
           </div>
-          <div class="cart-item row mb-2 align-items-center">
+          <div class="cart-item row mb-2 align-items-center" id="cart-spoon">
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Wooden Spoon</h5>
               <img
@@ -165,7 +180,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="spoon-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -178,7 +195,10 @@
               <div></div>
             </div>
           </div>
-          <div class="cart-item row mb-2 align-items-center">
+          <div
+            class="cart-item row mb-2 align-items-center"
+            id="cart-stand-mixer"
+          >
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Stand Mixer</h5>
               <img
@@ -189,7 +209,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="stand-mixer-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -202,7 +224,10 @@
               <div></div>
             </div>
           </div>
-          <div class="cart-item row mb-2 align-items-center">
+          <div
+            class="cart-item row mb-2 align-items-center"
+            id="cart-dutch-oven"
+          >
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Dutch Oven</h5>
               <img
@@ -213,7 +238,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="dutch-oven-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -226,7 +253,10 @@
               <div></div>
             </div>
           </div>
-          <div class="cart-item row mb-2 align-items-center">
+          <div
+            class="cart-item row mb-2 align-items-center"
+            id="cart-frying-pan"
+          >
             <div class="cart-item-title col-sm-3 mb-2">
               <h5>Frying Pan</h5>
               <img
@@ -237,7 +267,9 @@
             </div>
             <div class="col-sm-5"></div>
             <div class="col-sm-2 cart-remove">
-              <button class="cart-remove-button">Remove From Cart</button>
+              <button class="cart-remove-button" id="frying-pan-remove">
+                Remove From Cart
+              </button>
             </div>
             <div
               class="cart-item-price col-sm-2 d-flex align-items-center justify-content-around"
@@ -280,4 +312,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/cart.js"></script>
 </html>
